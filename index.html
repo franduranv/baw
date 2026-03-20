@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>
+    (function(){
+      var t=localStorage.getItem('zxy-theme');
+      document.documentElement.setAttribute('data-theme',
+        t||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
+    })();
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BaW — Hybrid Property Management Lab | ZXY Ventures</title>
@@ -24,6 +34,8 @@
     .cta-minimal p { color: var(--muted); margin-bottom: 32px; }
     @media (max-width: 640px) { .pitch-grid { grid-template-columns: 1fr; } .pitch-stat .num { font-size: 40px; } }
   </style>
+</head>
+<body>
   <!-- NAV -->
   <nav>
     <div class="container inner">
@@ -31,14 +43,19 @@
         <a href="https://zxy.vc" style="font-size:12px;color:var(--muted);font-family:var(--font-b);display:inline-flex;align-items:center;gap:4px;opacity:0.7;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">← zxy.vc</a>
         <span class="brand">BaW <span>Ventures</span></span>
       </div>
+      
       <a href="mailto:hey@baw.mx" class="btn-secondary" style="padding:8px 20px;font-size:.85rem;">hey@baw.mx</a>
+      <div class="nav-controls">
+        <button class="lang-toggle" aria-label="Switch language">ES</button>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch theme"></button>
+      </div>
     </div>
   </nav>
   <!-- HERO -->
   <section id="hero">
     <div class="container">
       <div class="hero-inner">
-        <div class="hero-eyebrow fade-in">Agentic Property Management · México · LatAm</div>
+        <div class="hero-eyebrow fade-in" data-es="Agentic Property Management · México · LatAm" data-en="Agentic Property Management · Mexico · LatAm">Agentic Property Management · México · LatAm</div>
         <h1 class="hero-headline fade-in fade-in-delay-1">
           Si en Silicon Valley pusieron<br>un agente a operar una vending machine,<br>
           <span class="line2">nosotros pusimos un equipo completo.</span>
@@ -48,8 +65,8 @@
           Revenue real. Propiedades reales. Equipo de agentes trabajando 24/7.
         </p>
         <div class="hero-ctas fade-in fade-in-delay-3">
-          <a href="https://baw.mx" class="btn-primary" target="_blank" rel="noopener">Ver operación comercial →</a>
-          <a href="mailto:hey@baw.mx" class="btn-secondary">Contactar</a>
+          <a href="https://baw.mx" class="btn-primary" target="_blank" rel="noopener" data-es="Ver operación comercial →" data-en="See commercial operation →">Ver operación comercial →</a>
+          <a href="mailto:hey@baw.mx" class="btn-secondary" data-es="Contactar" data-en="Contact">Contactar</a>
         </div>
       </div>
     </div>
@@ -57,7 +74,7 @@
   <!-- OPORTUNIDAD -->
   <section class="section">
     <div class="container">
-      <div class="section-tag">La oportunidad</div>
+      <div class="section-tag" data-es="La oportunidad" data-en="The Opportunity">La oportunidad</div>
       <div class="narrative">
         <h2>El mercado de renta corta en México<br>está roto. Y eso es una oportunidad.</h2>
         <p>El mercado de short-term rental en México mueve más de $3B USD anuales. El 80% de los operadores son propietarios individuales sin sistemas, sin automatización y con márgenes que se erosionan año con año.</p>
@@ -82,7 +99,7 @@
   <!-- PROBLEMA -->
   <section class="section" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
     <div class="container">
-      <div class="section-tag">El problema</div>
+      <div class="section-tag" data-es="El problema" data-en="The Problem">El problema</div>
       <div class="narrative">
         <h2>Operar una propiedad en renta corta<br>es un trabajo de tiempo completo.</h2>
         <p>Comunicación con huéspedes a cualquier hora. Coordinación de limpieza y mantenimiento. Optimización de precios dinámicos. Gestión de múltiples plataformas (Airbnb, Booking, VRBO). Facturación y contabilidad.</p>
@@ -94,7 +111,7 @@
   <!-- SOLUCIÓN -->
   <section class="section">
     <div class="container">
-      <div class="section-tag">La solución</div>
+      <div class="section-tag" data-es="La solución" data-en="The Solution">La solución</div>
       <div class="narrative">
         <h2>Agent OS como equipo fundador<br>de una property management company.</h2>
         <p>BaW no usa software de property management. BaW <em>es</em> un sistema de agentes que opera propiedades: comunica, coordina, optimiza, factura y reporta — de forma autónoma y continua.</p>
@@ -106,7 +123,7 @@
   <!-- TRACCIÓN -->
   <section class="section" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
     <div class="container">
-      <div class="section-tag">Tracción</div>
+      <div class="section-tag" data-es="Tracción" data-en="Traction">Tracción</div>
       <div class="narrative">
         <h2>Operación real.<br>Revenue real.</h2>
         <p>BaW opera hoy con propiedades activas generando revenue. El sistema Agent OS gestiona la operación completa: comunicación con huéspedes, coordinación logística, reportes financieros y optimización de ocupación.</p>
@@ -119,7 +136,7 @@
   <!-- SPINOUTS -->
   <section class="section">
     <div class="container">
-      <div class="section-tag">Lo que el Lab ha producido</div>
+      <div class="section-tag" data-es="Lo que el Lab ha producido" data-en="What the Lab Has Produced">Lo que el Lab ha producido</div>
       <div class="narrative">
         <h2>Un lab que no solo aprende.<br>Produce ventures reales.</h2>
         <p>ContaBeto nació aquí. El problema de contabilizar la operación de BaW — facturas, gastos, impuestos — se convirtió en el primer spinout del lab. Hoy es un venture independiente operando para PyMEs en México.</p>
@@ -138,7 +155,7 @@
   <!-- VISIÓN -->
   <section class="section">
     <div class="container">
-      <div class="section-tag">Visión</div>
+      <div class="section-tag" data-es="Visión" data-en="Vision">Visión</div>
       <div class="vision-box fade-in">
         <blockquote>"En 3 años, BaW es la plataforma de Agentic Property Management líder en LatAm — operando propiedades de terceros en México, Colombia y Chile con el mismo equipo de agentes."</blockquote>
       </div>
@@ -152,8 +169,8 @@
   <section class="section">
     <div class="container">
       <div class="cta-minimal fade-in">
-        <h2>¿Eres inversionista o propietario?</h2>
-        <p>Escríbenos. Mostramos números reales, no decks.</p>
+        <h2 data-es="¿Eres inversionista o propietario?" data-en="Are you an investor or property owner?">¿Eres inversionista o propietario?</h2>
+        <p data-es="Escríbenos. Mostramos números reales, no decks." data-en="Write to us. We show real numbers, not decks.">Escríbenos. Mostramos números reales, no decks.</p>
         <a href="mailto:hey@baw.mx" class="btn-primary" style="font-size:1.1rem;padding:16px 40px;">hey@baw.mx</a>
       </div>
     </div>
@@ -164,7 +181,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <div class="footer-logo">ZXY</div>
-        <div class="footer-tagline">"La diferencia entre usar IA y ser IA."</div>
+        <div class="footer-tagline" data-es=""La diferencia entre usar IA y ser IA."" data-en=""The difference between using AI and being AI."">"La diferencia entre usar IA y ser IA."</div>
       </div>
       <div class="footer-links">
         <a href="https://zxy.vc">ZXY Ventures</a>
@@ -172,16 +189,9 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>ZXY Ventures · zxy.vc · México · LatAm</span>
+      <span data-es="ZXY Ventures · zxy.vc · México · LatAm" data-en="ZXY Ventures · zxy.vc · Mexico · LatAm">ZXY Ventures · zxy.vc · México · LatAm</span>
     </div>
   </footer>
-
-  <script>
-    const fadeEls = document.querySelectorAll('.fade-in');
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    fadeEls.forEach(el => io.observe(el));
-  </script>
+  <script src="landing.js"></script>
 </body>
 </html>
