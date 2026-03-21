@@ -12,13 +12,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BaW — Hybrid Property Management Lab | ZXY Ventures</title>
   <meta name="description" content="El primer laboratorio de Agentic Property Management en México. Operación real, revenue real, equipo de agentes." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="BaW — Hybrid Property Management Lab | ZXY Ventures" />
+  <meta property="og:description" content="El primer laboratorio de Agentic Property Management en México. Operación real, revenue real, equipo de agentes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://baw.zxy.vc" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:site_name" content="BaW — ZXY Ventures" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BaW — Hybrid Property Management Lab" />
+  <meta name="twitter:description" content="El primer laboratorio de Agentic Property Management en México." />
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="canonical" href="https://baw.zxy.vc" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
     .pitch-stat { text-align: center; padding: 32px 24px; }
-    .pitch-stat .num { font-family: var(--font-h); font-size: 56px; font-weight: 600; color: #fff; line-height: 1; }
+    .pitch-stat .num { font-family: var(--font-h); font-size: 56px; font-weight: 600; color: var(--accent); line-height: 1; }
     .pitch-stat .label { font-size: 13px; color: var(--muted); margin-top: 8px; text-transform: uppercase; letter-spacing: 1px; }
     .pitch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin: 48px 0; }
     .pitch-grid .pitch-stat { background: var(--bg2); }
@@ -28,7 +43,7 @@
     .section-tag { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
     .section-tag::after { content: ''; flex: 1; height: 1px; background: var(--border); }
     .vision-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 48px; margin: 48px 0; }
-    .vision-box blockquote { font-family: var(--font-h); font-size: 28px; line-height: 1.4; color: #fff; border: none; padding: 0; margin: 0; }
+    .vision-box blockquote { font-family: var(--font-h); font-size: 28px; line-height: 1.4; color: var(--accent); border: none; padding: 0; margin: 0; }
     .cta-minimal { text-align: center; padding: 80px 0; }
     .cta-minimal h2 { font-family: var(--font-h); font-size: 48px; margin-bottom: 16px; }
     .cta-minimal p { color: var(--muted); margin-bottom: 32px; }
@@ -40,7 +55,7 @@
   <nav>
     <div class="container inner">
       <div style="display:flex;align-items:center;gap:20px;">
-        <a href="https://zxy.vc" style="font-size:12px;color:var(--muted);font-family:var(--font-b);display:inline-flex;align-items:center;gap:4px;opacity:0.7;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">← zxy.vc</a>
+        <a href="https://zxy.vc" class="nav-back-link" rel="noopener">← zxy.vc</a>
         <span class="brand">BaW <span>Ventures</span></span>
       </div>
       
@@ -51,16 +66,17 @@
       </div>
     </div>
   </nav>
+  <main>
   <!-- HERO -->
   <section id="hero">
     <div class="container">
       <div class="hero-inner">
         <div class="hero-eyebrow fade-in" data-es="Agentic Property Management · México · LatAm" data-en="Agentic Property Management · Mexico · LatAm">Agentic Property Management · México · LatAm</div>
-        <h1 class="hero-headline fade-in fade-in-delay-1">
+        <h1 class="hero-headline fade-in fade-in-delay-1" data-es="Si en Silicon Valley pusieron<br>un agente a operar una vending machine,<br><span class=&quot;line2&quot;>nosotros pusimos un equipo completo.</span>" data-en="If in Silicon Valley they put<br>an agent to run a vending machine,<br><span class=&quot;line2&quot;>we deployed an entire team.</span>">
           Si en Silicon Valley pusieron<br>un agente a operar una vending machine,<br>
           <span class="line2">nosotros pusimos un equipo completo.</span>
         </h1>
-        <p class="hero-sub fade-in fade-in-delay-2">
+        <p class="hero-sub fade-in fade-in-delay-2" data-es="BaW es el primer laboratorio de Hybrid Property Management operado por Agent OS.<br>Revenue real. Propiedades reales. Equipo de agentes trabajando 24/7." data-en="BaW is the first Hybrid Property Management lab powered by Agent OS.<br>Real revenue. Real properties. Agent team working 24/7.">
           BaW es el primer laboratorio de Hybrid Property Management operado por Agent OS.<br>
           Revenue real. Propiedades reales. Equipo de agentes trabajando 24/7.
         </p>
@@ -77,8 +93,8 @@
       <div class="section-tag" data-es="La oportunidad" data-en="The Opportunity">La oportunidad</div>
       <div class="narrative">
         <h2 data-es="El mercado de renta corta en México<br>está roto. Y eso es una oportunidad." data-en="The short-term rental market in Mexico<br>is broken. And that is an opportunity.">El mercado de renta corta en México<br>está roto. Y eso es una oportunidad.</h2>
-        <p>El mercado de short-term rental en México mueve más de $3B USD anuales. El 80% de los operadores son propietarios individuales sin sistemas, sin automatización y con márgenes que se erosionan año con año.</p>
-        <p>La gestión profesional (property management) apenas penetra el 15% del mercado en México vs 45% en mercados maduros como España o EE.UU. La brecha es enorme y nadie la ha atacado con IA.</p>
+        <p data-es="El mercado de short-term rental en México mueve más de $3B USD anuales. El 80% de los operadores son propietarios individuales sin sistemas, sin automatización y con márgenes que se erosionan año con año." data-en="The short-term rental market in Mexico generates over $3B USD annually. 80% of operators are individual owners with no systems, no automation, and margins eroding year after year.">El mercado de short-term rental en México mueve más de $3B USD anuales. El 80% de los operadores son propietarios individuales sin sistemas, sin automatización y con márgenes que se erosionan año con año.</p>
+        <p data-es="La gestión profesional (property management) apenas penetra el 15% del mercado en México vs 45% en mercados maduros como España o EE.UU. La brecha es enorme y nadie la ha atacado con IA." data-en="Professional property management barely penetrates 15% of the market in Mexico vs 45% in mature markets like Spain or the U.S. The gap is enormous and nobody has attacked it with AI.">La gestión profesional (property management) apenas penetra el 15% del mercado en México vs 45% en mercados maduros como España o EE.UU. La brecha es enorme y nadie la ha atacado con IA.</p>
       </div>
       <div class="pitch-grid fade-in">
         <div class="pitch-stat">
@@ -102,9 +118,9 @@
       <div class="section-tag" data-es="El problema" data-en="The Problem">El problema</div>
       <div class="narrative">
         <h2 data-es="Operar una propiedad en renta corta<br>es un trabajo de tiempo completo." data-en="Operating a short-term rental property<br>is a full-time job.">Operar una propiedad en renta corta<br>es un trabajo de tiempo completo.</h2>
-        <p>Comunicación con huéspedes a cualquier hora. Coordinación de limpieza y mantenimiento. Optimización de precios dinámicos. Gestión de múltiples plataformas (Airbnb, Booking, VRBO). Facturación y contabilidad.</p>
-        <p>Un propietario típico dedica 20-30 horas al mes por propiedad. Escalar a múltiples propiedades es humanamente imposible sin un equipo. Y contratar ese equipo destruye el margen.</p>
-        <p><strong>El resultado:</strong> el mercado está estancado en operadores de 1-3 propiedades que no pueden escalar. El upside del mercado está atrapado.</p>
+        <p data-es="Comunicación con huéspedes a cualquier hora. Coordinación de limpieza y mantenimiento. Optimización de precios dinámicos. Gestión de múltiples plataformas (Airbnb, Booking, VRBO). Facturación y contabilidad." data-en="Guest communication at all hours. Cleaning and maintenance coordination. Dynamic pricing optimization. Multi-platform management (Airbnb, Booking, VRBO). Invoicing and accounting.">Comunicación con huéspedes a cualquier hora. Coordinación de limpieza y mantenimiento. Optimización de precios dinámicos. Gestión de múltiples plataformas (Airbnb, Booking, VRBO). Facturación y contabilidad.</p>
+        <p data-es="Un propietario típico dedica 20-30 horas al mes por propiedad. Escalar a múltiples propiedades es humanamente imposible sin un equipo. Y contratar ese equipo destruye el margen." data-en="A typical owner spends 20-30 hours per month per property. Scaling to multiple properties is humanly impossible without a team. And hiring that team destroys the margin.">Un propietario típico dedica 20-30 horas al mes por propiedad. Escalar a múltiples propiedades es humanamente imposible sin un equipo. Y contratar ese equipo destruye el margen.</p>
+        <p data-es="<strong>El resultado:</strong> el mercado está estancado en operadores de 1-3 propiedades que no pueden escalar. El upside del mercado está atrapado." data-en="<strong>The result:</strong> the market is stuck with 1-3 property operators who can't scale. The market's upside is trapped."><strong>El resultado:</strong> el mercado está estancado en operadores de 1-3 propiedades que no pueden escalar. El upside del mercado está atrapado.</p>
       </div>
     </div>
   </section>
@@ -114,9 +130,9 @@
       <div class="section-tag" data-es="La solución" data-en="The Solution">La solución</div>
       <div class="narrative">
         <h2 data-es="Agent OS como equipo fundador<br>de una property management company." data-en="Agent OS as the founding team<br>of a property management company.">Agent OS como equipo fundador<br>de una property management company.</h2>
-        <p>BaW no usa software de property management. BaW <em>es</em> un sistema de agentes que opera propiedades: comunica, coordina, optimiza, factura y reporta — de forma autónoma y continua.</p>
-        <p>Alicia (COO de BaW) coordina operaciones. Beto gestiona finanzas. Andrés mantiene las integraciones tecnológicas. Hugo coordina el equipo. Todo automatizado, todo trazable, todo documentado.</p>
-        <p>El modelo no requiere escalar headcount. Escala con propiedades.</p>
+        <p data-es="BaW no usa software de property management. BaW <em>es</em> un sistema de agentes que opera propiedades: comunica, coordina, optimiza, factura y reporta — de forma autónoma y continua." data-en="BaW doesn't use property management software. BaW <em>is</em> an agent system that operates properties: communicates, coordinates, optimizes, invoices and reports — autonomously and continuously.">BaW no usa software de property management. BaW <em>es</em> un sistema de agentes que opera propiedades: comunica, coordina, optimiza, factura y reporta — de forma autónoma y continua.</p>
+        <p data-es="Alicia (COO de BaW) coordina operaciones. Beto gestiona finanzas. Andrés mantiene las integraciones tecnológicas. Hugo coordina el equipo. Todo automatizado, todo trazable, todo documentado." data-en="Alicia (BaW's COO) coordinates operations. Beto manages finances. Andrés maintains tech integrations. Hugo coordinates the team. All automated, all traceable, all documented.">Alicia (COO de BaW) coordina operaciones. Beto gestiona finanzas. Andrés mantiene las integraciones tecnológicas. Hugo coordina el equipo. Todo automatizado, todo trazable, todo documentado.</p>
+        <p data-es="El modelo no requiere escalar headcount. Escala con propiedades." data-en="The model doesn't require scaling headcount. It scales with properties.">El modelo no requiere escalar headcount. Escala con propiedades.</p>
       </div>
     </div>
   </section>
@@ -126,8 +142,8 @@
       <div class="section-tag" data-es="Tracción" data-en="Traction">Tracción</div>
       <div class="narrative">
         <h2 data-es="Operación real.<br>Revenue real." data-en="Real operations.<br>Real revenue.">Operación real.<br>Revenue real.</h2>
-        <p>BaW opera hoy con propiedades activas generando revenue. El sistema Agent OS gestiona la operación completa: comunicación con huéspedes, coordinación logística, reportes financieros y optimización de ocupación.</p>
-        <p>Estamos en proceso de migración a Guesty como PMS central — el siguiente paso para escalar el modelo a más propiedades y eventualmente a terceros.</p>
+        <p data-es="BaW opera hoy con propiedades activas generando revenue. El sistema Agent OS gestiona la operación completa: comunicación con huéspedes, coordinación logística, reportes financieros y optimización de ocupación." data-en="BaW operates today with active properties generating revenue. The Agent OS system manages the complete operation: guest communication, logistics coordination, financial reports and occupancy optimization.">BaW opera hoy con propiedades activas generando revenue. El sistema Agent OS gestiona la operación completa: comunicación con huéspedes, coordinación logística, reportes financieros y optimización de ocupación.</p>
+        <p data-es="Estamos en proceso de migración a Guesty como PMS central — el siguiente paso para escalar el modelo a más propiedades y eventualmente a terceros." data-en="We are in the process of migrating to Guesty as our central PMS — the next step to scale the model to more properties and eventually to third parties.">Estamos en proceso de migración a Guesty como PMS central — el siguiente paso para escalar el modelo a más propiedades y eventualmente a terceros.</p>
       </div>
     </div>
   </section>
@@ -139,14 +155,14 @@
       <div class="section-tag" data-es="Lo que el Lab ha producido" data-en="What the Lab Has Produced">Lo que el Lab ha producido</div>
       <div class="narrative">
         <h2 data-es="Un lab que no solo aprende.<br>Produce ventures reales." data-en="A lab that doesn't just learn.<br>It produces real ventures.">Un lab que no solo aprende.<br>Produce ventures reales.</h2>
-        <p>ContaBeto nació aquí. El problema de contabilizar la operación de BaW — facturas, gastos, impuestos — se convirtió en el primer spinout del lab. Hoy es un venture independiente operando para PyMEs en México.</p>
-        <p>Ese es el modelo del BaW Lab: resolver problemas operativos reales con IA, documentar el sistema, y escalar la solución como producto independiente. BaW no es solo un negocio de property management — es la incubadora donde nacen los ventures de operación AI-Native de ZXY.</p>
+        <p data-es="ContaBeto nació aquí. El problema de contabilizar la operación de BaW — facturas, gastos, impuestos — se convirtió en el primer spinout del lab. Hoy es un venture independiente operando para PyMEs en México." data-en="ContaBeto was born here. The challenge of accounting for BaW's operation — invoices, expenses, taxes — became the lab's first spinout. Today it's an independent venture serving SMBs in Mexico.">ContaBeto nació aquí. El problema de contabilizar la operación de BaW — facturas, gastos, impuestos — se convirtió en el primer spinout del lab. Hoy es un venture independiente operando para PyMEs en México.</p>
+        <p data-es="Ese es el modelo del BaW Lab: resolver problemas operativos reales con IA, documentar el sistema, y escalar la solución como producto independiente. BaW no es solo un negocio de property management — es la incubadora donde nacen los ventures de operación AI-Native de ZXY." data-en="That's the BaW Lab model: solve real operational problems with AI, document the system, and scale the solution as an independent product. BaW is not just a property management business — it's the incubator where ZXY's AI-Native operation ventures are born.">Ese es el modelo del BaW Lab: resolver problemas operativos reales con IA, documentar el sistema, y escalar la solución como producto independiente. BaW no es solo un negocio de property management — es la incubadora donde nacen los ventures de operación AI-Native de ZXY.</p>
       </div>
       <div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:32px;margin-top:40px;display:flex;align-items:flex-start;gap:24px;">
-        <div style="font-family:var(--font-h);font-size:48px;line-height:1;color:rgba(255,255,255,0.15);flex-shrink:0;">"</div>
+        <div style="font-family:var(--font-h);font-size:48px;line-height:1;color:rgba(var(--accent-rgb),0.15);flex-shrink:0;">"</div>
         <div>
-          <p style="font-family:var(--font-h);font-size:20px;color:#fff;line-height:1.4;margin:0 0 12px;">ContaBeto nació aquí.</p>
-          <p style="font-size:14px;color:var(--muted);margin:0;">El problema de contabilizar la operación de BaW se convirtió en el primer spinout del lab — hoy un venture independiente operando para PyMEs en México. <a href="https://contabeto.zxy.vc" style="color:var(--accent2);">contabeto.zxy.vc →</a></p>
+          <p style="font-family:var(--font-h);font-size:20px;color:var(--accent);line-height:1.4;margin:0 0 12px;">ContaBeto nació aquí.</p>
+          <p style="font-size:14px;color:var(--muted);margin:0;">El problema de contabilizar la operación de BaW se convirtió en el primer spinout del lab — hoy un venture independiente operando para PyMEs en México. <a href="https://contabeto.zxy.vc" style="color:var(--accent2);" rel="noopener">contabeto.zxy.vc →</a></p>
         </div>
       </div>
     </div>
@@ -160,7 +176,7 @@
         <blockquote data-es=""En 3 años, BaW es la plataforma de Agentic Property Management líder en LatAm — operando propiedades de terceros en México, Colombia y Chile con el mismo equipo de agentes."" data-en=""In 3 years, BaW is the leading Agentic Property Management platform in LatAm — managing third-party properties in Mexico, Colombia and Chile with the same agent team."">"En 3 años, BaW es la plataforma de Agentic Property Management líder en LatAm — operando propiedades de terceros en México, Colombia y Chile con el mismo equipo de agentes."</blockquote>
       </div>
       <div class="narrative">
-        <p>El modelo es replicable en cualquier mercado de habla hispana. El playbook está documentado. El sistema está construido. Lo que falta es capital para escalar la adquisición de propiedades bajo gestión.</p>
+        <p data-es="El modelo es replicable en cualquier mercado de habla hispana. El playbook está documentado. El sistema está construido. Lo que falta es capital para escalar la adquisición de propiedades bajo gestión." data-en="The model is replicable in any Spanish-speaking market. The playbook is documented. The system is built. What's missing is capital to scale the acquisition of properties under management.">El modelo es replicable en cualquier mercado de habla hispana. El playbook está documentado. El sistema está construido. Lo que falta es capital para escalar la adquisición de propiedades bajo gestión.</p>
       </div>
     </div>
   </section>
@@ -169,13 +185,14 @@
   <section class="section">
     <div class="container">
       <div class="cta-minimal fade-in">
-        <h2 data-es="¿Eres inversionista o propietario?" data-en="Are you an investor or property owner?" data-es="¿Eres inversionista o propietario?" data-en="Are you an investor or property owner?">¿Eres inversionista o propietario?</h2>
-        <p data-es="Escríbenos. Mostramos números reales, no decks." data-en="Write to us. We show real numbers, not decks." data-es="Escríbenos. Mostramos números reales, no decks." data-en="Write to us. We show real numbers, not decks.">Escríbenos. Mostramos números reales, no decks.</p>
+        <h2 data-es="¿Eres inversionista o propietario?" data-en="Are you an investor or property owner?">¿Eres inversionista o propietario?</h2>
+        <p data-es="Escríbenos. Mostramos números reales, no decks." data-en="Write to us. We show real numbers, not decks.">Escríbenos. Mostramos números reales, no decks.</p>
         <a href="mailto:hey@baw.mx" class="btn-primary" style="font-size:1.1rem;padding:16px 40px;">hey@baw.mx</a>
       </div>
     </div>
   </section>
 
+  </main>
   <!-- FOOTER -->
   <footer class="container">
     <div class="footer-inner">
@@ -184,7 +201,7 @@
         <div class="footer-tagline" data-es='"La diferencia entre usar IA y ser IA."' data-en='"The difference between using AI and being AI."'>"La diferencia entre usar IA y ser IA."</div>
       </div>
       <div class="footer-links">
-        <a href="https://zxy.vc">ZXY Ventures</a>
+        <a href="https://zxy.vc" rel="noopener">ZXY Ventures</a>
         <a href="mailto:hey@baw.mx">hey@baw.mx</a>
       </div>
     </div>

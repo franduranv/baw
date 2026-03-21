@@ -23,7 +23,13 @@
     document.documentElement.lang = lang;
     localStorage.setItem(LANG_KEY, lang);
     document.querySelectorAll('[data-en][data-es]').forEach(function (el) {
-      el.innerHTML = el.getAttribute('data-' + lang) || el.getAttribute('data-en');
+      var content = el.getAttribute('data-' + lang) || el.getAttribute('data-en');
+      // Use innerHTML only when content contains markup (e.g. <br>, <em>)
+      if (/<[a-z][\s\S]*>/i.test(content)) {
+        el.innerHTML = content;
+      } else {
+        el.textContent = content;
+      }
     });
     document.querySelectorAll('.lang-toggle').forEach(function (b) {
       b.textContent = lang === 'en' ? 'ES' : 'EN';

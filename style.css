@@ -905,6 +905,18 @@ footer {
   align-items: center;
   gap: 8px;
 }
+.nav-back-link {
+  font-size: 12px;
+  color: var(--muted);
+  font-family: var(--font-b);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.nav-back-link:hover { opacity: 1; }
+
 .lang-toggle {
   background: none;
   border: 1px solid var(--border2);
